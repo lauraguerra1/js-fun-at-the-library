@@ -3,9 +3,7 @@
 // become comfortable with these fundamental concepts. Do not move on to
 // iteration 1 until you are confident that you've completed all of iteration 0.
 
-
 //------------------------- Variables -------------------------//
-
 
 // Initialize two new variables, "title", and "pages", and assign values to them with
 // a book's title and page count.
@@ -39,25 +37,24 @@ var isShortStory = pages < 25;
 
 //------------------------- Conditionals -------------------------//
 
-
 // Express the following in code: If the variable "pages" is less than 1000 log
 // the statement 'I could read that in a day!', otherwise, log the statement
 // 'Ok, maybe I could read that in a day and a half'
 
 if (pages < 1000) {
-    console.log(`I could read that in a day!`);
+  console.log(`I could read that in a day!`);
 } else {
-    console.log(`Ok, maybe I could read that in a day and a half`);
+  console.log(`Ok, maybe I could read that in a day and a half`);
 }
 
 // Express the following in code: If the variable "isFavorite" is true,
 // log the statement 'My favorite book is [title]!'. Otherwise, log the
 // statement 'I recently read the [title] book'. In either case, the value stored in
 // the "title" variable should be included in the logged statement.
-if (isFavorite){
-    console.log(`My favorite book is ${title}!`);
+if (isFavorite) {
+  console.log(`My favorite book is ${title}!`);
 } else {
-    console.log(`I recently read the ${title} book.`)
+  console.log(`I recently read the ${title} book.`);
 }
 
 //------------------------- Arrays -------------------------//
@@ -66,26 +63,23 @@ if (isFavorite){
 // Create a new variable "books" and assign it to an Array of 5 different
 // book titles, represented by their names as Strings.
 var books = [
-    'Harry Potter and The Scorcerer\'s Stone',
-    'Harry Potter and The Chamber of Secrets', 
-    'Harry Potter and The Prisoner of Azkaban',
-    'Harry Potter and The Goblet of Fire',
-    'Harry Potter and the Order of the Phoenix'
-]
-
+  "Harry Potter and The Scorcerer's Stone",
+  "Harry Potter and The Chamber of Secrets",
+  "Harry Potter and The Prisoner of Azkaban",
+  "Harry Potter and The Goblet of Fire",
+  "Harry Potter and the Order of the Phoenix",
+];
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
-console.log(books[2])
+console.log(books[2]);
 
 // Create a new variable "belowTwoHundred" and assign it to an Array of 12
 // different numbers below two hundred.
-var belowTwoHundred = [2, 4, 6, 8, 12, 16, 24, 32, 48, 64, 96, 128]
-
-
+var belowTwoHundred = [2, 4, 6, 8, 12, 16, 24, 32, 48, 64, 96, 128];
 
 // Write the code to access the 5th element of the array, using bracket notation.
-console.log(belowTwoHundred[4])
+console.log(belowTwoHundred[4]);
 
 //------------------------- Objects -------------------------//
 
@@ -93,10 +87,9 @@ console.log(belowTwoHundred[4])
 // keys: name, and hasThesaurus. The value for name should the string 'Webster's', and
 // the value for hasThesaurus should be false
 var dictionary = {
-    name: 'Webster\'s',
-    hasThesaurus: false
-}
-
+  name: "Webster's",
+  hasThesaurus: false,
+};
 
 // Write the code to add the key of pageCount, with the value of 720. Use dot
 // notation to do this. DO NOT modify your code from above.
