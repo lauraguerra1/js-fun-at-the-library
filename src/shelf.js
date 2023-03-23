@@ -7,6 +7,12 @@ function unshelfBook(title, shelf) {
   var matchingBook = shelf.find((book) => book.title === title);
   var index = shelf.indexOf(matchingBook);
   shelf.splice(index, 1);
+
+  // for (var i = 0; i < shelf.length; i++) {
+  //   if (shelf[i].title === title) {
+  //     shelf.splice(i, 1);
+  //   }
+  // }
 }
 function listTitles(shelf) {
   var sentence = ``;
@@ -16,6 +22,16 @@ function listTitles(shelf) {
       : (sentence += book.title)
   );
   return sentence;
+
+  // var sentence = ``;
+  // for (var i = 0; i < shelf.length; i++) {
+  //  if (i < shelf.length - 1) {
+  //    sentence += `${shelf[i].title}, `;
+  //    } else {
+  //    sentence += shelf[i].title;
+  //    }
+  //  }
+  // return sentence;
 }
 function searchShelf(shelf, title) {
   return shelf.includes(shelf.find((book) => book.title === title));
