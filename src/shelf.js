@@ -15,13 +15,22 @@ function unshelfBook(title, shelf) {
   // }
 }
 function listTitles(shelf) {
-  var sentence = ``;
-  shelf.forEach((book, i) =>
-    i < shelf.length - 1
-      ? (sentence += `${book.title}, `)
-      : (sentence += book.title)
-  );
+  var sentence = shelf.reduce((acc, curr, i) => {
+    if (i < shelf.length - 1) {
+      return (acc += `${curr.title}, `);
+    } else {
+      return (acc += curr.title);
+    }
+  }, '');
   return sentence;
+
+  // var sentence = ``;
+  // shelf.forEach((book, i) =>
+  //   i < shelf.length - 1
+  //     ? (sentence += `${book.title}, `)
+  //     : (sentence += book.title)
+  // );
+  // return sentence;
 
   // var sentence = ``;
   // for (var i = 0; i < shelf.length; i++) {
@@ -35,6 +44,14 @@ function listTitles(shelf) {
 }
 function searchShelf(shelf, title) {
   return shelf.includes(shelf.find((book) => book.title === title));
+
+  //  var bookFound = [];
+  //   for (var i = 0; i < shelf.length; i++) {
+  //     if (shelf[i].title === title){
+  //       bookFound.push(true);
+  //     }
+  //   }
+  //   return bookFound.includes(true);
 }
 module.exports = {
   shelfBook,
