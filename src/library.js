@@ -46,11 +46,16 @@ function takeStock(library, shelf) {
   if (shelf) {
     return `There are a total of ${library.shelves[shelf].length} ${shelf} books at the ${library.name}.`;
   } else {
-    var totalBooks = 0;
-    allShelves.forEach((shelf) => (totalBooks += shelf.length));
+    var totalBooks = allShelves.reduce((acc, curr) => acc.concat(curr)).length;
+  
+    // var totalBooks = 0;
+    // allShelves.forEach((shelf) => (totalBooks += shelf.length));
+    
+    // var totalBooks = 0;
     // for (var i = 0; i < allShelves.length; i++) {
     //     totalBooks += allShelves[i].length;
     //   }
+
     return `There are a total of ${totalBooks} books at the ${library.name}.`;
   }
 }
